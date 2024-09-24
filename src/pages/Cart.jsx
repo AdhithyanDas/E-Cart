@@ -60,8 +60,8 @@ function Cart() {
                 </table>
                 :
                 <h3 className="textcenter textwarning">No Items Added Yet!!</h3>
-
             }
+
           </Col>
 
           <Col sm={12} md={4}>

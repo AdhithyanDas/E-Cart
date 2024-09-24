@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
 import { Link } from 'react-router-dom';
-import { useSelector,useDispatch } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import { searchWithKey } from '../Redux/Slice/productSlice';
 
 function Header() {
@@ -12,10 +12,10 @@ function Header() {
 
     const { cart } = useSelector((state => state.cartReducer))
 
-    const [key,setKey]=useState("")
-    
-    const dispatch=useDispatch()
-    
+    const [key, setKey] = useState("")
+
+    const dispatch = useDispatch()
+
     return (
         <>
             <Navbar className="bg-body-tertiary p-3">
@@ -29,8 +29,8 @@ function Header() {
                     </Navbar.Brand>
                     <div className='d-flex'>
                         <div className='d-flex'>
-                            <input type="text" placeholder='Enter Keyword to Search' className='form-control' onChange={(e)=>setKey(e.target.value)} />
-                            <button className='btn btn-success ms-2' onClick={()=>dispatch(searchWithKey(key))}>Search</button>
+                            <input type="text" placeholder='Enter Keyword to Search' className='form-control' onChange={(e) => setKey(e.target.value)} />
+                            <button className='btn btn-success ms-2' onClick={() => dispatch(searchWithKey(key))}>Search</button>
                         </div>
                         <Link to={'/wish'} className='btn border border-dark me-3 text-black ms-5'>
                             <i className="fa-solid fa-heart" style={{ color: "#f7021b" }} />

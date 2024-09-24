@@ -1,6 +1,5 @@
 import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-import { Link } from 'react-router-dom'
 import { removeFromWishList } from '../Redux/Slice/wishSlice'
 import { addToCart } from '../Redux/Slice/cartSlice'
 
